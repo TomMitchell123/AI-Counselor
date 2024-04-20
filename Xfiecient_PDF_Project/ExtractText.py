@@ -1,12 +1,13 @@
-import pdfplumber
+import subprocess
+import os
 
 def extract_text_from_pdf(pdf_path):
-    with pdfplumber.open(pdf_path) as pdf:
-        total_text = ''
-        for page in pdf.pages:
-            total_text += page.extract_text() + '\n'  # Extract text from each page
-        return total_text
+    #proc = subprocess.Popen(["pdf2txt", pdf_path], stdout=subprocess.PIPE, shell=True)
+    proc = os.popen(f"pdf2txt {pdf_path}").read()
+    return proc
 
-# Example usage
-pdf_text = extract_text_from_pdf('University_Course_Catalog_Data_Extraction_and_Query_Challenge.pdf')
-print(pdf_text)
+
+if __name__ == "__main__":
+    # Example usage
+    pdf_text = extract_text_from_pdf('vt.pdf')
+    print(pdf_text)
