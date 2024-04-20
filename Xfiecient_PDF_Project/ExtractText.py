@@ -51,9 +51,9 @@ if __name__ == "__main__":
 
         print("Adding data to the dictionary")
 
-# Writing data to JSON file
-with open('output.json', 'w') as json_file:
-    json.dump(data, json_file, indent=4)
-    print("Data saved to output.json")
+    # Writing data to JSON file
+    with open('output.json', 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+        print("Data saved to output.json")
 
 
