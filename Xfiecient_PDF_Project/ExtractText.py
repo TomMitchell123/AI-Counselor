@@ -1,5 +1,8 @@
 import pdfplumber
+import json
 import re
+
+data =	{}
 
 def extract_text_from_pdf(pdf_path):
     text = ""
@@ -21,14 +24,11 @@ if __name__ == "__main__":
 
     # Extract text from PDF
     extracted_text = extract_text_from_pdf(pdf_path)
-    print("FInihsed extracting text!")
+    print("Finihsed extracting text!")
 
     # Write extracted text to a text file
     write_text_to_file(extracted_text, output_path)
     print(f"Text saved to {output_path}")
-
-
-
 
     pattern = r'(\d{4}): ([A-Z\s-]+)\n((?:.|\n)+?)(?=\n\d{4}|$)'
     # Find all matches in the input string
@@ -44,12 +44,16 @@ if __name__ == "__main__":
         if matches:
             credits = matches[-1]  # Return the first match
         else:
-            credits = "Variable"        
-        
-        print("Course ID:", course_id)
-        print("Course Title:", course_title)
-        print("Description:", description)
-        print("Credits:", credits)
-        print("///////////////////////////////////") 
+            credits = "Variable"      
+
+        # Adding data to the dictionary
+        data[course_title] = {"ID": course_id, "Description": description, "Credits": credits}
+
+        print("Adding data to the dictionary")
+
+# Writing data to JSON file
+with open('output.json', 'w') as json_file:
+    json.dump(data, json_file, indent=4)
+    print("Data saved to output.json")
 
 
