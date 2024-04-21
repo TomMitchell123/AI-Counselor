@@ -18,3 +18,11 @@ def process_query():
     text_output = query.process_query(request.headers.get('input'))
     print(text_output)
     return {"output":text_output}
+
+@app.route("/upload_pdf", methods=['POST'])
+def upload_pdf():
+    file = request.files['file']
+    file.save(f"./incoming_pdf/{file.filename}")
+    
+    return "hello"
+    
