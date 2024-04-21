@@ -25,7 +25,7 @@ with open('data/cdata.json') as f:
 query_engine = JSONalyzeQueryEngine(
     list_of_dict=d,
     llm= Ollama(model="llama3", request_timeout=900.0),
-    verbose=False,
+    verbose=True,
     streaming=True,
 )
 
