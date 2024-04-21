@@ -9,7 +9,6 @@ embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.llms.ollama import Ollama
 
-# 加载文档
 
 import json
 from llama_index.core.query_engine import JSONalyzeQueryEngine
@@ -29,7 +28,6 @@ query_engine = JSONalyzeQueryEngine(
     streaming=True,
 )
 
-# 获取用户输入
 from IPython.display import Markdown, display
 
 
@@ -37,6 +35,5 @@ def call_ai(query):
     query = "ONLY TYPE THE SQL QUERY AND NOTHING ELSE. Here is the question: " + query
 
 
-    # 提问并打印答案
     response = query_engine.query(query)
-    print(response)
+    return str(response)

@@ -8,11 +8,12 @@ import { MuiFileInput } from 'mui-file-input'
 import { Stack } from '@mui/material';
 
 function App() {
-  const [textOutput, setTextOutput] = useState(["This is a test"]);
+  const [textOutput, setTextOutput] = useState(["Please Choose a File"]);
   const [file, setFile] = useState("Choose File");
   const [fileUploaded, setFileUploaded] = useState(false);
 
   const handleSubmit = (event) => {
+    setTextOutput("Loading...");
     const input = document.getElementById("input-field").value;
     const options = {
       method: "GET",
@@ -42,6 +43,7 @@ function App() {
     })
 
     setFileUploaded(!fileUploaded);
+    setTextOutput("Please Input Your Query")
   }
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>

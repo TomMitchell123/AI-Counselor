@@ -39,4 +39,4 @@ def call_ai(query):
 
     # 提问并打印答案
     response = query_engine.query(query)
-    print(response)
+    return str(response)
