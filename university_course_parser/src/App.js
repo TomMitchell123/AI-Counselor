@@ -13,7 +13,7 @@ function App() {
   const [fileUploaded, setFileUploaded] = useState(false);
 
   const handleSubmit = (event) => {
-    setTextOutput("Loading...");
+    setTextOutput("This may take a minute. Loading...");
     const input = document.getElementById("input-field").value;
     const options = {
       method: "GET",

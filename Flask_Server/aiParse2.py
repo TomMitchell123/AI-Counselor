@@ -9,7 +9,6 @@ embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.llms.ollama import Ollama
 
-
 import json
 from llama_index.core.query_engine import JSONalyzeQueryEngine
 
