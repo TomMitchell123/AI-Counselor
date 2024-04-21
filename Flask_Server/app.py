@@ -16,10 +16,6 @@ def process_query():
     """
     text_output = ai_parse.call_ai(request.headers.get('input'))
     
-    # Check for SQL in the output and return an error message if found
-    if "SQL" in text_output:
-        return {"output": "Sorry, this query did not work. Try again!"}
-
     # Append additional information based on specific keywords in the input
     if "degree" in request.headers.get('input'):
         text_output += " For degree requirements go to http://registrar.vt.edu/graduation-multi-brief/index1.html"

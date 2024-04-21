@@ -31,10 +31,12 @@ query_engine = JSONalyzeQueryEngine(
 # Import display utilities from IPython for output formatting
 from IPython.display import Markdown, display
 
+
 # Define a function to call the AI model with a given query
 def call_ai(query):
+    
     # Prepend a standard instruction to the query
-    query = "ONLY TYPE THE SQL QUERY AND NOTHING ELSE.  Here is the question: " + query
+    query = "ONLY TYPE THE SQL QUERY WHEN SEARCHING THE DATABASE.  Here is the question: " + query
 
     # Execute the query using the initialized query engine
     response = query_engine.query(query)
