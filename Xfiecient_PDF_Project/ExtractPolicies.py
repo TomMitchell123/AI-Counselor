@@ -1,7 +1,7 @@
 import json
 
 def extract_academic_policies(filename):
-    academic_policies = {}
+    academic_policies = {"Policies": []}
     with open(filename, 'r') as file:
         lines = file.readlines()
         i = 0
@@ -9,13 +9,15 @@ def extract_academic_policies(filename):
             if lines[i].strip() == "Academic Policies":
                 i += 1
                 while i < len(lines) and lines[i].strip() != "Academic Policies":
-                    key = lines[i].strip()
+                    title = lines[i].strip()
                     i += 1
-                    value = ""
+                    values = []
                     while i < len(lines) and lines[i].strip() != "Academic Policies":
-                        value += lines[i]
+                        values.append(lines[i].strip())
                         i += 1
-                    academic_policies[key] = value.strip()
+                    # Concatenate values into a single string
+                    values_concatenated = ' '.join(values)
+                    academic_policies["University Policies"].append({"Title of Academic Policy": title, "University Academic Policy Explained": values_concatenated})
             else:
                 i += 1
     return academic_policies
