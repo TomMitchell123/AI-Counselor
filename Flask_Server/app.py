@@ -4,8 +4,6 @@ from Testing_Back_End.query_processing import query
 from flask import request
 from flask_cors import CORS
 
-import aiParse2
-
 app = Flask(__name__)
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -26,8 +24,6 @@ def process_query():
 def upload_pdf():
     file = request.files['file']
     file.save(f"./incoming_pdf/{file.filename}")
-    
-    
     
     return "hello"
     
