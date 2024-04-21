@@ -16,12 +16,6 @@ def process_query():
     """
     text_output = ai_parse.call_ai(request.headers.get('input'))
     
-    # Append additional information based on specific keywords in the input
-    if "degree" in request.headers.get('input'):
-        text_output += " For degree requirements go to http://registrar.vt.edu/graduation-multi-brief/index1.html"
-    elif "requirement" in request.headers.get('input'):
-        text_output += " For degree requirements go to http://registrar.vt.edu/graduation-multi-brief/index1.html"
-        
     # Log the final text output for debugging purposes
     print(text_output)
 
