@@ -61,10 +61,10 @@ def extract_courses(text_by_page):
             
             if course_title.isupper():  # Only add courses with titles in all caps
                 courses_list.append({
-                    "coursename": course_title,
-                    "id": course_id,
-                    "description": course_description.strip(),
-                    "credits": course_credits  # Properly separated credits
+                    "course_name": course_title,
+                    "course_id": course_id,
+                    "course_description": course_description.strip(),
+                    "course_credits": course_credits  # Properly separated credits
                 })
     
     return {"courses": courses_list}  # Wrap the list in a dict under the key "courses"
