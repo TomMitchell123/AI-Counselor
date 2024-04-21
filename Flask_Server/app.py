@@ -4,6 +4,8 @@ from Testing_Back_End.query_processing import query
 from flask import request
 from flask_cors import CORS
 
+import aiParse2
+
 app = Flask(__name__)
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -15,8 +17,19 @@ def process_pdf():
 
 @app.route("/process_query")
 def process_query():
-    text_output = query.process_query(request.headers.get('input'))
+    text_output = aiParse2.call_ai(request.headers.get('input'))
+    
+    if "SQL" in text_output:
+        return {"output": "Sorry, this query did not work. Try again!"}
+
+    if "degree" in request.headers.get('input'):
+        text_output += " For degree requirements go to http://registrar.vt.edu/graduation-multi-brief/index1.html"
+
+    elif "requirement" in request.headers.get('input'):
+        text_output += " For degree requirements go to http://registrar.vt.edu/graduation-multi-brief/index1.html"
+        
     print(text_output)
+
     return {"output":text_output}
 
 @app.route("/upload_pdf", methods=['POST'])

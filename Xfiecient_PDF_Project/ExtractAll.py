@@ -27,19 +27,20 @@ def find_all_course_info(course_code_pattern, text_by_page):
             course_info_list.append((course_description, page_number))
     return course_info_list
 
-# Example usage:
-pdf_path = 'vt.pdf'
-text_by_page = extract_text_by_page(pdf_path)
+if __name__ == "__main__":
+    # Example usage:
+    pdf_path = 'vt.pdf'
+    text_by_page = extract_text_by_page(pdf_path)
 
-# Prompt user to input a sample course code
-sample_course_code = input("Enter a sample course code: ")
+    # Prompt user to input a sample course code
+    sample_course_code = input("Enter a sample course code: ")
 
-# Generate regex pattern based on the sample course code format
-course_code_pattern = generate_course_code_regex(sample_course_code)
+    # Generate regex pattern based on the sample course code format
+    course_code_pattern = generate_course_code_regex(sample_course_code)
 
-# Find all course information
-all_course_info = find_all_course_info(course_code_pattern, text_by_page)
+    # Find all course information
+    all_course_info = find_all_course_info(course_code_pattern, text_by_page)
 
-# Print all course information found
-for index, (course_info, page_number) in enumerate(all_course_info, start=1):
-    print(f"Course {index} Info: {course_info}\nFound on page: {page_number}\n")
+    # Print all course information found
+    for index, (course_info, page_number) in enumerate(all_course_info, start=1):
+        print(f"Course {index} Info: {course_info}\nFound on page: {page_number}\n")
