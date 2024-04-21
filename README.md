@@ -1,6 +1,6 @@
 # Bitcamp2024
 
-## AI Course Counselor
+## The AI Course Counselor
 
 The AI Course Counselor is a powerful web application that empowers students to navigate the **vast** expanse of university course catalogs with ease. By harnessing the power of **natural language processing** and **machine learning**, this innovative tool serves as a virtual academic advisor, providing personalized guidance and insights tailored to each student's unique needs.
 
@@ -12,4 +12,4 @@ The AI Course Counselor is a powerful web application that empowers students to 
 
 ## Getting Started
 
-To start using the** AI Course Counselor**, simply input a PDF of your course catalog and **ASK AWAY**!
+To start using the **The AI Course Counselor**, simply input a PDF of your course catalog and **ASK AWAY**!
