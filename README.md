@@ -13,3 +13,12 @@ AI Counselor is a powerful web application that empowers students to navigate th
 ## Getting Started
 
 To start using the **AI Counselor**, simply input a PDF of your course catalog and **ASK AWAY**!
+
+## Installation
+
+Run the following to install
+```
+pip install llama-index-core llama-index-readers-file llama-index-llms-ollama llama-index-embeddings-huggingface
+```
+
+Then, install ollama and pull the llama3 model. Run the ollama server while using application. 

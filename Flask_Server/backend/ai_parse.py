@@ -15,11 +15,9 @@ import json
 from llama_index.core.query_engine import JSONalyzeQueryEngine
 
 # Define file paths for course and policy data
-courses = 'data/cdata.json'
-pol = 'data/pdata.json'
 
 # Load course data from JSON file
-with open('data/cdata.json') as f:
+with open('backend/data/cdata.json') as f:
     d = json.load(f)
 
 # Initialize the query engine with loaded data and specific configurations

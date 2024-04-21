@@ -1,7 +1,7 @@
 # Import necessary modules from Flask, Flask-CORS, and local modules for processing
 from flask import Flask, request
 from flask_cors import CORS
-import Flask_Server.backend.ai_parse as ai_parse
+from backend import ai_parse 
 
 # Initialize Flask app and configure CORS
 app = Flask(__name__)
