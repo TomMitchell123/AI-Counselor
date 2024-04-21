@@ -36,7 +36,7 @@ text_by_page = extract_text_by_page(pdf_path)
 extract_text_by_line(pdf_path, 'textbyline.txt')
 
 courses_info = extract_courses(text_by_page)
-write_to_json(courses_info, "courses.json")
+write_to_json(courses_info, "../Flask_Server/data/cdata.json")
 
 academic_policies = extract_academic_policies("textbyline.txt")
-write_to_json(academic_policies, "policies.json")
+write_to_json(academic_policies, "../Flask_Server/data/pdata.json")
