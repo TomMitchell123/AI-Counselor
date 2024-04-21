@@ -1,8 +1,8 @@
-# Bitcamp2024
+# AI Counselor
 
-## The AI Course Counselor
+## Bitcamp2024 - Tom Mitchell, Jinson Jimmy, Adi Rathni, Sunil Pateel
 
-The AI Course Counselor is a powerful web application that empowers students to navigate the **vast** expanse of university course catalogs with ease. By harnessing the power of **natural language processing** and **machine learning**, this innovative tool serves as a virtual academic advisor, providing personalized guidance and insights tailored to each student's unique needs.
+AI Counselor is a powerful web application that empowers students to navigate the **vast** expanse of university course catalogs with ease. By harnessing the power of **natural language processing** and **machine learning**, this innovative tool serves as a virtual academic advisor, providing personalized guidance and insights tailored to each student's unique needs.
 
 1. **Data Extraction:** The AI Course Counselor extracts key information from university course catalogs (**hundreds of pages**), transforming unstructured PDF documents into structured, machine-readable JSON formats. This includes course details such as titles, codes, descriptions, credit hours, and academic policies like grading systems, academic standing, and transfer credit rules.
 
@@ -12,4 +12,4 @@ The AI Course Counselor is a powerful web application that empowers students to 
 
 ## Getting Started
 
-To start using the **The AI Course Counselor**, simply input a PDF of your course catalog and **ASK AWAY**!
+To start using the **AI Counselor**, simply input a PDF of your course catalog and **ASK AWAY**!
