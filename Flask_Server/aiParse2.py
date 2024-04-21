@@ -32,7 +32,7 @@ from IPython.display import Markdown, display
 
 
 def call_ai(query):
-    query = "ONLY TYPE THE SQL QUERY AND NOTHING ELSE. Limit the number of courses listed to 5. Here is the question: " + query
+    query = "ONLY TYPE THE SQL QUERY AND NOTHING ELSE.  Here is the question: " + query
 
 
     response = query_engine.query(query)
